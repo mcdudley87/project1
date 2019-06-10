@@ -1,0 +1,145 @@
+html, body {
+	background-color: black;
+
+}
+
+header {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	color: ivory;
+	text-align: center;
+
+}
+
+main{
+	display: grid;
+	grid-gap: 0.5em;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 1em;
+	border: 10px;
+	padding: 1em;
+	width: 475px;
+	height: 625px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 40px;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+	"monster monster monster monster"
+	"		.				hp   hp		 .				"
+	"	dice	dice	dice		 		total	"
+	" dice  dice	dice				adv		"
+	"   . 	.		.					button2		"
+	"		.		.		.					button		"
+	;
+	/* grid-gap: 1em; */
+	
+	}
+
+  /* @media screen and (max-width: 1080px) {
+		main {
+			display: inline-grid;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-areas:
+			"monster monster monster monster"
+			"		.				hp   hp		 .				"
+			"	dice	dice	dice	total				"
+			" dice  dice	dice		adv				"
+			"   . 	.				.			.					"
+			"		.		button	button	.				"
+			;
+		} */
+
+
+	footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: ivory;
+	text-align: center;
+	}
+
+	/*gamespace*/
+	
+#button {
+		grid-area: button;
+		display: grid;
+		border-radius: 100px;
+		height: 60px;
+		width: 60px;
+		color: white;
+		font-size: 12px;
+		background-color: blue;
+		text-align: center;
+	}
+
+#button2 {
+		grid-area: button2;
+		display: grid;
+		border-radius: 100px;
+		height: 60px;
+		width: 60px; 
+		color: white;
+		font-size: 12px;
+		background-color: red;
+		text-align: center;
+	}
+
+	#monster {
+	grid-area: monster;
+	display: grid;
+	text-align: center;
+	background-color: antiquewhite;
+	height: 300px;
+	border-radius: 1em;
+}
+
+#hp {
+	grid-area: hp;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 100px;
+}
+
+#dice { 
+	grid-area: dice;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 150px;
+}
+
+#total {
+	grid-area: total;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 50px;
+}
+
+#adv{
+	grid-area: adv;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 25px;
+
+}
+
+
+/* Hardhat Area:
+
+-Media query for mobile optimization
+
+
+	<div id="center-dice-animation">dice</div>
+	<div id="advantages">advantages</div>
+	<div id="right-dicetotal
+
+
+
+
+*/
+
