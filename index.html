@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Demons & Dicerolls</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide&display=swap" rel="stylesheet">
+	<!-- font-family: 'Audiowide', cursive; -->
 </head>
 
 <header>
@@ -17,14 +19,17 @@
 <body>
 
 <main>
-	<div id="monster">monster</div>
+	<div id="monster"> Monster name here
+			<img id="demon" src="img/monster1.jpg" alt="demon">
+	</div>
 	<div id="hp">hp</div>
-	<div id="dice">dice</div><!-- save total until monster dead-->
-	<div id="total">dice totals</div>
-	<div id="adv">advantages</div>
-	<button id="button">LET'S ROLL.</button>
-	<button id="button2">PUNCH IT.</button>	
-	
+	<div id="text">Welcome mortal! Push 'Start' to Begin!</div>
+	<div id="dice">dice</div>
+	<div id="lives">lives</div>
+	<div id="total"></div> 
+	<input type="button" id="rollButton" value="Roll!"/>
+	<input type="button" id="startButton" value="Start"/>
+	<input type="button" id="resetButton" value="Reset"/>
 </main>
 
 
@@ -38,10 +43,17 @@
 	GrayHaven Productions LLC.
 </footer>
 
-
-
-
-
 	<script src="js/script.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- HARD HAT AREA
+	
+	
+	<button id="button">1LET'S ROLL.</button> 
+	<button id="button2">*2PUNCH IT.</button>	 
+
+-->

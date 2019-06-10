@@ -11,49 +11,33 @@ header {
 
 }
 
-main{
+main {
 	display: grid;
+	box-shadow: 5px;
 	grid-gap: 0.5em;
 	background-color: rgba(255, 255, 255, 0.8);
 	border-radius: 1em;
 	border: 10px;
 	padding: 1em;
-	width: 475px;
+	width: 450px;
 	height: 625px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
 	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
-	"monster monster monster monster"
-	"		.				hp   hp		 .				"
-	"	dice	dice	dice		 		total	"
-	" dice  dice	dice				adv		"
-	"   . 	.		.					button2		"
-	"		.		.		.					button		"
+	"monster monster  monster"
+	"	text 		text 		 text	"
+	"	score		hp  		lives				"
+	"	dice	dice		total					"
+	" dice  dice		rollButton		"
+	" startButton  resetButton 	.					"
 	;
-	/* grid-gap: 1em; */
-	
-	}
-
-  /* @media screen and (max-width: 1080px) {
-		main {
-			display: inline-grid;
-			grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-template-areas:
-			"monster monster monster monster"
-			"		.				hp   hp		 .				"
-			"	dice	dice	dice	total				"
-			" dice  dice	dice		adv				"
-			"   . 	.				.			.					"
-			"		.		button	button	.				"
-			;
-		} */
+}
 
 
-	footer {
+footer {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
 	color: ivory;
@@ -62,41 +46,99 @@ main{
 
 	/*gamespace*/
 	
-#button {
-		grid-area: button;
+
+#rollButton {
+		/*rolls dice*/
+		grid-area: rollButton;
 		display: grid;
 		border-radius: 100px;
 		height: 60px;
 		width: 60px;
 		color: white;
-		font-size: 12px;
-		background-color: blue;
-		text-align: center;
-	}
-
-#button2 {
-		grid-area: button2;
-		display: grid;
-		border-radius: 100px;
-		height: 60px;
-		width: 60px; 
-		color: white;
-		font-size: 12px;
+		font-size: 15px;
+		font-family: 'Audiowide', cursive;
 		background-color: red;
 		text-align: center;
 	}
 
-	#monster {
+/* #button2 {
+	/rolls dice with adv./
+	grid-area: button2;
+	display: grid;
+	border-radius: 100px;
+	height: 47px;
+	width: 47px; 
+	color: white;
+	font-size: 10px;
+	background-color: red;
+	text-align: center;
+} */
+
+#startButton {
+	/*starts game/new spin */
+	grid-area: startButton;
+	display: grid;
+	border-radius: 100px;
+	height: 16px;
+	width: 150px; 
+	color: black;
+	font-size: 12px;
+	background-color: gray;
+	text-align: center;
+}
+
+#resetButton {
+	/*resets game*/
+	grid-area: resetButton;
+	display: grid;
+	border-radius: 100px;
+	height: 16px;
+	width: 150px; 
+	color: black;
+	font-size: 12px;
+	background-color: gray;
+	text-align: center;
+}
+
+#monster {
 	grid-area: monster;
 	display: grid;
 	text-align: center;
-	background-color: antiquewhite;
+	background-color:rgb(232, 243, 72);
 	height: 300px;
 	border-radius: 1em;
 }
 
+#monster img {
+	height: 270px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#text {
+	grid-area: text;
+	border-radius: 10px;
+	display: grid;
+	background-color: rgb(232, 243, 72);
+	height: 20px;
+	font-family: 'Audiowide', cursive;
+	font-size: 13px;
+	text-align: center;
+}
+
 #hp {
 	grid-area: hp;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 100px;
+	font-family: 'Audiowide', cursive;
+	font-size: 50px;
+	text-align: center;
+}
+
+#score {
+	grid-area: score;
 	border-radius: 10px;
 	display: grid;
 	background-color: lightblue;
@@ -116,17 +158,37 @@ main{
 	border-radius: 10px;
 	display: grid;
 	background-color: lightblue;
-	height: 50px;
+	height: 90px;
+	width: 90px;
+	color: black;
+	font-size: 80px;
+	text-align: center;
+	font-family: 'Audiowide', cursive;
 }
 
-#adv{
-	grid-area: adv;
+#lives {
+	grid-area: lives;
 	border-radius: 10px;
 	display: grid;
 	background-color: lightblue;
-	height: 25px;
+	height: 45px;
+	width: 45px;
 
 }
+
+
+/* Media Queries */
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Hardhat Area:
