@@ -16,6 +16,8 @@ var nameEl;
 var dice;
 var img1 = "img/monster1";
 var img2 = "img/monster1dead";
+
+
 var dungeon = [ 
 		{	health: 14,
 			name: "Medium Monster",
@@ -78,12 +80,21 @@ function start() {
 function reset() {
 	document.getElementById("total").textContent = ("0");
 	document.getElementById("hp").textContent = ("0");
+	document.getElementById("score").textContent = ("0");
 	document.getElementById("lives").textContent = ("3");
 	document.getElementById("text").textContent = ("Welcome mortal! Push 'Start' to Begin!");
 	document.getElementById("monsterBio").textContent = ("Who shall we slay today?");
 	document.getElementById("rollButton").disabled = false;
 	demon.src = 'img/monster1.jpg';
 };
+
+/* get random monster function:
+
+var summon = dungeon[Math.floor(Math.random()*dungeon.length)];
+
+
+
+*/
 
 
 document.addEventListener("DOMContentLoaded", function() {
