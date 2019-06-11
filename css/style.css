@@ -19,20 +19,21 @@ main {
 	border-radius: 1em;
 	border: 10px;
 	padding: 1em;
-	width: 450px;
-	height: 625px;
+	width: 425px;
+	height: 675px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 40px;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 12px 1fr 1fr 1fr 1fr 1fr;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
-	"monster monster  monster"
-	"	text 		text 		 text	"
-	"	score		hp  		lives				"
-	"	dice	dice		total					"
-	" dice  dice		rollButton		"
-	" startButton  resetButton 	.					"
+	"monster monster  monster					"
+	"monsterBio monsterBio monsterBio "
+	"	text 		text 		 text						"
+	"	 hp 			vs 		total						"
+	"	dice	dice		lives							"
+	" dice  dice		rollButton				"
+	" startButton  resetButton 	.			"
 	;
 }
 
@@ -47,8 +48,9 @@ footer {
 	/*gamespace*/
 	
 
+		/*buttons and controls*/
 #rollButton {
-		/*rolls dice*/
+		
 		grid-area: rollButton;
 		display: grid;
 		border-radius: 100px;
@@ -61,21 +63,20 @@ footer {
 		text-align: center;
 	}
 
-/* #button2 {
-	/rolls dice with adv./
-	grid-area: button2;
-	display: grid;
-	border-radius: 100px;
-	height: 47px;
-	width: 47px; 
-	color: white;
-	font-size: 10px;
-	background-color: red;
-	text-align: center;
-} */
+#rollButton:hover {
+	color: black;
+	background-color: rgb(138, 15, 15);
+	border-color: rgb(138, 15, 15);
+	transition: 0.35s;
+}
+
+#rollButton:active {
+	background-color: rgba(255, 0, 0, 0.877);
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
 
 #startButton {
-	/*starts game/new spin */
 	grid-area: startButton;
 	display: grid;
 	border-radius: 100px;
@@ -87,8 +88,8 @@ footer {
 	text-align: center;
 }
 
+
 #resetButton {
-	/*resets game*/
 	grid-area: resetButton;
 	display: grid;
 	border-radius: 100px;
@@ -100,6 +101,9 @@ footer {
 	text-align: center;
 }
 
+
+/*Game Space*/
+
 #monster {
 	grid-area: monster;
 	display: grid;
@@ -107,6 +111,20 @@ footer {
 	background-color:rgb(232, 243, 72);
 	height: 300px;
 	border-radius: 1em;
+	font-family: 'Audiowide', cursive;
+}
+
+#monsterBio {
+	grid-area: monsterBio;
+	border: 1px gray dashed;
+	display: grid;
+	background-color: rgb(232, 243, 72);
+	height: 20px;
+	width: 400px;
+	margin: 0 auto;
+	font-family: 'Audiowide', cursive;
+	font-size: 13px;
+	text-align: center;
 }
 
 #monster img {
@@ -117,10 +135,12 @@ footer {
 
 #text {
 	grid-area: text;
-	border-radius: 10px;
+	border: 1px gray dashed;
 	display: grid;
 	background-color: rgb(232, 243, 72);
 	height: 20px;
+	width: 300px;
+	margin: 0 auto;
 	font-family: 'Audiowide', cursive;
 	font-size: 13px;
 	text-align: center;
@@ -131,26 +151,23 @@ footer {
 	border-radius: 10px;
 	display: grid;
 	background-color: lightblue;
-	height: 100px;
+	height: 90px;
+	width: 100px;
 	font-family: 'Audiowide', cursive;
-	font-size: 50px;
+	font-size: 80px;
 	text-align: center;
 }
 
-#score {
-	grid-area: score;
+#vs {
+	grid-area: vs;
 	border-radius: 10px;
 	display: grid;
-	background-color: lightblue;
-	height: 100px;
-}
-
-#dice { 
-	grid-area: dice;
-	border-radius: 10px;
-	display: grid;
-	background-color: lightblue;
-	height: 150px;
+	height: 90px;
+	width: 100px;
+	font-family: 'Audiowide', cursive;
+	font-size: 60px;
+	color: white;
+	text-align: center;
 }
 
 #total {
@@ -159,13 +176,20 @@ footer {
 	display: grid;
 	background-color: lightblue;
 	height: 90px;
-	width: 90px;
+	width: 100px;
 	color: black;
 	font-size: 80px;
 	text-align: center;
 	font-family: 'Audiowide', cursive;
 }
 
+#dice { 
+	grid-area: dice;
+	border-radius: 10px;
+	display: grid;
+	background-color: lightblue;
+	height: 130px;
+}
 #lives {
 	grid-area: lives;
 	border-radius: 10px;
@@ -177,16 +201,7 @@ footer {
 }
 
 
-/* Media Queries */
-
-
-
-
-
-
-
-
-
+/* Media Queries? */
 
 
 
