@@ -13,23 +13,49 @@ var flavorTxtEl;
 var livesEl;
 var name;
 var nameEl;
+var pic;
 var dice;
 var img1 = "img/monster1";
 var img2 = "img/monster1dead";
 
 
+
+
 var dungeon = [ 
 		{	health: 14,
 			name: "Medium Monster",
-			flavorTxt: "Larry likes walks on the beach and eating your face...",
+			flavorTxt: "Likes walks on the beach and eating your face...",
+			pic: "img/monster2.jpg",
 		},
 		{	health: 10, 
 			name: "Easy Orc",
-			flavorTxt: "Used to believe in himself, but then took an arrow to the knee.",
+			flavorTxt: "Believed in himself, but then took an arrow to the knee.",
+			pic: "img/monster3.jpg",
 		},
 		{ health: 17,
 			name: "Hard Hellion",
-			flavorTxt: "Large, hard, and in charge."
+			flavorTxt: "Large, hard, and in charge.",
+			pic: "img/monster3.jpg",
+		},
+		{ health: 5,
+			name: "Orc Dork",
+			flavorTxt: "Orc the Dork slays with spork.",
+			pic: "img/monster4.jpg",
+		},
+		{ health: 19,
+			name: "Hard Hellion",
+			flavorTxt: "Can you even stand them biceps?",
+			pic: "img/monster5.jpg",
+		},
+		{ health: 12,
+			name: "Hard Hellion",
+			flavorTxt: "Swipes right to disembowel you.",
+			pic: "img/monster1.jpg",
+		},
+		{ health: 8,
+			name: "Hard Hellion",
+			flavorTxt: "Devours more souls than your ex.",
+			pic: "img/monster3.jpg",
 		},
 ];
 
@@ -50,29 +76,40 @@ function roll() {
 		livesEl.textContent = lives;
 		score++;
 		scoreEl.textContent = score;
-	} else if (lives===0) {
+	} else if (lives=== 0) {
 		document.getElementById("rollButton").disabled = true;
-		document.getElementById("text").textContent = ("Game Over");
+		document.getElementById("text").textContent = ("Game Over. Push Reset to Play.");
 		document.getElementById("monsterBio").textContent = ("You have been defeated, mortal...");
+	} else if (score>=10) {
+		document.getElementById("text").textContent = ("I DIDN'T EVEN WRITE LOGIC FOR THAT!");
+		document.getElementById("monsterBio").textContent = ("HOLY BUTTS YOU BEAT THE GAME!");
+		document.getElementById("total").textContent = ("HOLY BUTTS");
+		document.getElementById("hp").textContent = ("HOLY BUTTS");
+		document.getElementById("score").textContent = ("HOLY BUTTS");
+		document.getElementById("lives").textContent = ("HOLY BUTTS");
 	} else { 
 		document.getElementById("text").textContent = ("You lose...this time!"); 
 		document.getElementById("rollButton").disabled = true;
 		lives--;
-		livesEl.textContent =lives;
+		livesEl.textContent = lives;
 	} 
 };	
 
 
 //Gets monster, starts game
 function start() {
-	//var demon= myArray[Math.floor(Math.random() * dungeon.length)];
-	healthEl.textContent=dungeon[0].health;
-	health=dungeon[0].health;
+	if (lives>0) {
+	healthEl.textContent=dungeon[Math.floor(Math.random()*dungeon.length)].health;
+	health=dungeon[Math.floor(Math.random()*dungeon.length)].health;
 	document.getElementById("text").textContent = ("Good luck..."); 
 	document.getElementById("total").textContent = ("0");
-	document.getElementById("monsterBio").textContent = (dungeon[0].flavorTxt);
+	document.getElementById("monsterBio").textContent = (dungeon[Math.floor(Math.random()*dungeon.length)].flavorTxt);
 	document.getElementById("rollButton").disabled = false;
-	demon.src = 'img/monster1.jpg';
+	demon.src = dungeon[Math.floor(Math.random()*dungeon.length)].pic;  //FLAG FOR CHANGE IMAGE FUNCTION
+	} else if (lives===0 ) {
+		document.getElementById("rollButton").disabled = true;
+		document.getElementById("startButton").disabled = true;
+	}
 };
 
 
@@ -92,8 +129,6 @@ function reset() {
 
 var summon = dungeon[Math.floor(Math.random()*dungeon.length)];
 
-
-
 */
 
 
@@ -110,10 +145,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	scoreEl=document.getElementById("score")
 	} 
 );
-
-//lives restored
-	//re-activate roll button
-
 
 
 
