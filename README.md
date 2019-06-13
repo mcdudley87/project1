@@ -35,14 +35,14 @@ from one object and the health from another.
   
 
 Tools Used:
--JavaScript
--HTML
--CSS
--Trusty legal pad and ballpoint.
+1. JavaScript
+2. HTML
+3. CSS
+4. Trusty legal pad and ballpoint.
 
 Resources:
--logo on start screen: https://textcraft.net/
--GIFs animated by myself compiled with: https://gifmaker.me/
--Google
--StackOverflow
+1. logo on start screen: https://textcraft.net/
+2. GIFs animated by myself compiled with: https://gifmaker.me/
+3. Google
+4. StackOverflow
 
