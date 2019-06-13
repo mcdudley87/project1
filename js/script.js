@@ -81,7 +81,7 @@ var dungeon = [
 			flavorTxt: "[Here come the warm jets...of blood.]",
 			pic: "img/monster2.jpg",
 		},
-		{	health: 20,
+		{	health: 19,
 			name: "Hieronymus Boss ",
 			flavorTxt: "[He's a boss-ass boss, boss, boss...]",
 			pic: "img/monster2.jpg",
