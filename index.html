@@ -27,25 +27,27 @@
 	<div id="score">0</div>
 	<div id="scoreText">Demons Slain</div>
 	<div id="text">Welcome mortal! Push 'Start' to Begin!</div>
-	<div id="dice"></div>
+	<div id="dice">
+			<img id="diceRoll" src="img/D200.jpg" alt="diceRoll">
+	</div>
 	<div id="vs">VS.</div>
 	<div id="lives">3</div>
 	<div id="total"></div> 
-	<input type="button" id="rollButton" value="Roll!"/>
+	<input type="button" id="rollButton" value="Roll"/>
 	<input type="button" id="startButton" value="Summon"/>
 	<input type="button" id="resetButton" value="Reset"/>
 </main>
-
-<!-- <button id="reset">1 Credit to Play</button> disable when you have lives. -->
 
 
 <footer>
 	GrayHaven Productions LLC.
 </footer>
 <footer>
-	<audio controls loop id="audio">
-		<source src="audio/07 - Schism.mp3" type="audio/mp3">	
-	</audio>
+
+
+
+	<div id="music"><embed src="audio/07 - Schism.mp3" autostart=true loop=true></div>
+
 </footer>
 
 	<script src="js/script.js"></script>
@@ -57,6 +59,7 @@
 
 <!-- HARD HAT AREA
 	
-	
+	Embed autoplay music
+	More assets with the monsters
 
 -->
