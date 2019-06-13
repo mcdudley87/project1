@@ -23,38 +23,63 @@ var img2 = "img/monster1dead";
 var dungeon = [ 
 		{	health: 14,
 			name: "Medium Monster",
-			flavorTxt: "Likes walks on the beach and eating your face...",
+			flavorTxt: "[Likes walks on the beach and eating your face...]",
 			pic: "img/monster2.jpg",
 		},
 		{	health: 10, 
 			name: "Easy Orc",
-			flavorTxt: "Believed in himself util he took an arrow in the knee.",
+			flavorTxt: "[Believed in himself util he took an arrow in the knee.]",
 			pic: "img/monster3.jpg",
 		},
 		{ health: 17,
 			name: "Hard Hellion",
-			flavorTxt: "Large, hard, and in charge.",
+			flavorTxt: "[Large, hard, and in charge.]",
 			pic: "img/monster3.jpg",
 		},
 		{ health: 5,
 			name: "Orc Dork",
-			flavorTxt: "Orc the Dork slays with spork.",
+			flavorTxt: "[Orc the Dork slays with spork.]",
 			pic: "img/monster4.jpg",
 		},
 		{ health: 19,
 			name: "Hard Hellion",
-			flavorTxt: "Can you even stand them biceps?",
+			flavorTxt: "[Nom Chompsky here to nom you. And also chomp.]",
 			pic: "img/monster5.jpg",
 		},
 		{ health: 12,
 			name: "Hard Hellion",
-			flavorTxt: "Swipes right to disembowel you.",
+			flavorTxt: "[Can haz cookie? O, dat cookie iz ur face.]",
 			pic: "img/monster1.jpg",
 		},
 		{ health: 8,
 			name: "Hard Hellion",
-			flavorTxt: "Devours more souls than your ex.",
+			flavorTxt: "[Will disembowel. Then re-embowel. With a trowel.]",
 			pic: "img/monster3.jpg",
+		},
+		{	health: 14,
+			name: "Medium Monster",
+			flavorTxt: "[Phil eats naughty dogs.]",
+			pic: "img/monster2.jpg",
+		},
+		{	health: 14,
+			name: "Medium Monster",
+			flavorTxt: "[He's got tenticular cancer.]",
+			pic: "img/monster2.jpg",
+		},
+		{	health: 14,
+			name: "Medium Monster",
+			flavorTxt: "[So long and fangs for all the fish.]",
+			pic: "img/monster2.jpg",
+		},
+		{	health: 14,
+			name: "Medium Monster",
+			flavorTxt: "[Enjoy tea, crumpets, and viscera.]",
+			pic: "img/monster2.jpg",
+		},
+		{	health: 14,
+			name: "Medium Monster",
+			flavorTxt: "[Here come the warm jets...of blood.]",
+			pic: "img/monster2.jpg",
 		},
 ];
 
@@ -74,7 +99,8 @@ function roll() {
 	console.log("score:", score);
 	if (rnd >= health) {
 		console.log("rnd is greater than health...");
-		document.getElementById("text").textContent = ("You win! Push SUMMON to play.");
+		document.getElementById("monsterBio").textContent = ("Monster slain! Play again!");
+		document.getElementById("text").textContent = ("Push SUMMON for next demon.");
 		demon.src = 'img/monster1dead.jpg';
 		document.getElementById("rollButton").disabled = true;
 		lives++;
@@ -86,8 +112,8 @@ function roll() {
 		document.getElementById("rollButton").disabled = true;
 		document.getElementById("text").textContent = ("Game Over. Push Reset to Play.");
 		document.getElementById("monsterBio").textContent = ("You have been defeated, mortal...");
-		demon.src = "img/gameover.png";
-	} else if (score===10) {
+		demon.src = "img/gameover.gif";
+	} else if (score>=10) {
 		console.log("score is >= 10");
 		document.getElementById("text").textContent = ("I DIDN'T EVEN WRITE LOGIC FOR THAT!");
 		document.getElementById("monsterBio").textContent = ("HOLY BUTTS YOU BEAT THE GAME!");
@@ -119,7 +145,7 @@ console.log(lives);
 // 	if (lives===0) {
 // 		document.getElementById("text").textContent = ("Game Over. Push Reset to Play.");
 // 		document.getElementById("monsterBio").textContent = ("You have been defeated, mortal...");
-// 		demon.src = "img/gameover.png";
+// 		demon.src = "img/gameover.gif";
 // 	} else if (score===10) {
 // 		document.getElementById("text").textContent = ("I DIDN'T EVEN WRITE LOGIC FOR THAT!");
 // 		document.getElementById("monsterBio").textContent = ("HOLY BUTTS YOU BEAT THE GAME!");
@@ -138,7 +164,7 @@ function start() {
 		var rand = Math.floor(Math.random()*dungeon.length);
 		healthEl.textContent=dungeon[rand].health;
 		health=dungeon[rand].health;
-		document.getElementById("text").textContent = ("Good luck..."); 
+		document.getElementById("text").textContent = (dungeon[rand].name);
 		document.getElementById("total").textContent = ("0");
 		document.getElementById("monsterBio").textContent = (dungeon[rand].flavorTxt);
 		document.getElementById("rollButton").disabled = false;
@@ -149,7 +175,7 @@ function start() {
 		document.getElementById("startButton").disabled = true;
 		document.getElementById("text").textContent = ("Game Over. Push Reset to Play.");
 		document.getElementById("monsterBio").textContent = ("You have been defeated, mortal...");
-		demon.src = "img/gameover.png";
+		demon.src = "img/gameover.gif";
 	}
 };
 
@@ -159,11 +185,12 @@ function reset() {
 	document.getElementById("hp").textContent = ("0");
 	document.getElementById("score").textContent = ("0");
 	document.getElementById("lives").textContent = ("3");
-	document.getElementById("text").textContent = ("Welcome mortal! Push 'Start' to Begin!");
+	document.getElementById("text").textContent = ("Welcome mortal! Push 'Summon' to Begin!");
 	document.getElementById("monsterBio").textContent = ("Who shall we slay today?");
 	document.getElementById("rollButton").disabled = false;
 	document.getElementById("startButton").disabled = false;
 	diceRoll.src = "img/D200.jpg";
+	demon.src = "img/DnDice.png"
 	lives = 3;
 };
 
@@ -180,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	resetButton.addEventListener("click", reset)
 	livesEl=document.getElementById("lives")
 	scoreEl=document.getElementById("score")
+	monsterName=document.getElementById("monster")
 	} 
 );
 
