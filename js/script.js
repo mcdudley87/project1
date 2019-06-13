@@ -41,13 +41,13 @@ var dungeon = [
 			flavorTxt: "[Orc the Dork slays with spork.]",
 			pic: "img/monster4.jpg",
 		},
-		{ health: 19,
-			name: "Harder Hellion",
+		{ health: 17,
+			name: "Nom Chompsky",
 			flavorTxt: "[Nom Chompsky here to nom you. And also chomp.]",
 			pic: "img/monster5.jpg",
 		},
 		{ health: 12,
-			name: "Meaty-yum Difficulty Monster",
+			name: "",
 			flavorTxt: "[Can haz cookie? O, dat cookie iz ur face.]",
 			pic: "img/monster1.jpg",
 		},
@@ -66,7 +66,7 @@ var dungeon = [
 			flavorTxt: "[He's got tenticular cancer.]",
 			pic: "img/monster2.jpg",
 		},
-		{	health: 14,
+		{	health: 11,
 			name: "Witchhiker, with Guide",
 			flavorTxt: "[So long and fangs for all the fish.]",
 			pic: "img/monster2.jpg",
@@ -76,9 +76,14 @@ var dungeon = [
 			flavorTxt: "[Enjoy tea, crumpets, and viscera.]",
 			pic: "img/monster2.jpg",
 		},
-		{	health: 14,
+		{	health: 7,
 			name: "Brian Eatnose",
 			flavorTxt: "[Here come the warm jets...of blood.]",
+			pic: "img/monster2.jpg",
+		},
+		{	health: 20,
+			name: "Hieronymus Boss ",
+			flavorTxt: "[He's a boss-ass boss, boss, boss...]",
 			pic: "img/monster2.jpg",
 		},
 ];
@@ -86,6 +91,8 @@ var dungeon = [
 
 //Functions
 
+
+// TO-DO: Clone this button, make it smaller and only active if lives > 2 = true, +5 to damage. 
 
 			//Rolls Dice
 function roll() {
