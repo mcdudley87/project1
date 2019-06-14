@@ -47,7 +47,7 @@ var dungeon = [
 			pic: "img/monster5.jpg",
 		},
 		{ health: 12,
-			name: "",
+			name: "Bull-doge-er",
 			flavorTxt: "[Can haz cookie? O, dat cookie iz ur face.]",
 			pic: "img/monster1.jpg",
 		},
