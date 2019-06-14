@@ -210,6 +210,7 @@ button[disabled]{
 	text-align: center;
 }
 
+/* Monster health */
 #hp {
 	grid-area: hp;
 	border-radius: 10px;
@@ -222,6 +223,8 @@ button[disabled]{
 	font-size: 80px;
 	text-align: center;
 	margin: 0 auto;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 #vs {
@@ -237,6 +240,7 @@ button[disabled]{
 	margin: 0 auto;
 }
 
+/* Player dice total */
 #total {
 	grid-area: total;
 	border-radius: 10px;
@@ -250,6 +254,8 @@ button[disabled]{
 	text-align: center;
 	font-family: 'Audiowide', cursive;
 	margin: 0 auto;
+	max-height: 100%;
+	max-width: 100%;
 }
 
 #dice { 
