@@ -28,7 +28,7 @@ var dungeon = [
 		},
 		{	health: 10, 
 			name: "Easy, Sleazy, Orc McDeluxe",
-			flavorTxt: "[Believed in himself util he took an arrow in the knee.]",
+			flavorTxt: "[Believed in himself until he took an arrow in the knee.]",
 			pic: "img/monster3.jpg",
 		},
 		{ health: 17,
