@@ -12,6 +12,18 @@ This also tapped into my of writing and design and gave me some room to
 write goofy flavor text and do some simple art and animations (pixelated 
 sprites are not mine, those are from Google).
 
+The Rules:
+
+The game is essentially a slot machine game of chance that uses the D20 theme from 
+DND and other RPGs. The play begins the game by summoning a demon at random from 
+the array of monsters, The Dungeon, by pressing the summon button. This populates the 
+HP, flavor text, name, and image of the monster. 
+
+The player presses roll to play. A win gains another roll, a loss loses a roll, 
+the game ends when you win with 10 monsters slain or when your lives drop to zero.
+Pressing reset does exactly that. 
+
+
 Process:
 
 1. Started with the layout and CSS. I work visually, so I form a concept
